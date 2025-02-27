@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 10 Business Studies Mock Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .mcq label {
+            display: block;
+            margin: 5px 0;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .example {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        #totalScore {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grade 10 Business Studies Mock Test (Semester 1)</h1>
+    <p><strong>Duration:</strong> 1 hour 30 minutes | <strong>Total Marks:</strong> 100</p>
+
+    <!-- Section A: Multiple-Choice Questions -->
+    <div class="section">
+        <h2>Section A: Multiple-Choice Questions (20 marks)</h2>
+        <form id="mcqForm">
+            <div class="question">
+                <p>1. What is the primary goal of most for-profit businesses?</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q1" value="a"> a) Community service</label>
+                    <label><input type="radio" name="q1" value="b"> b) Profit maximization</label>
+                    <label><input type="radio" name="q1" value="c"> c) Employee welfare</label>
+                    <label><input type="radio" name="q1" value="d"> d) Environmental protection</label>
+                </div>
+                <div class="result" id="result1"></div>
+            </div>
+            <div class="question">
+                <p>2. Which sector extracts raw materials directly from nature?</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q2" value="a"> a) Primary</label>
+                    <label><input type="radio" name="q2" value="b"> b) Secondary</label>
+                    <label><input type="radio" name="q2" value="c"> c) Tertiary</label>
+                    <label><input type="radio" name="q2" value="d"> d) Quaternary</label>
+                </div>
+                <div class="result" id="result2"></div>
+            </div>
+            <div class="question">
+                <p>3. Which business function manages recruitment and training?</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q3" value="a"> a) Marketing</label>
+                    <label><input type="radio" name="q3" value="b"> b) Finance</label>
+                    <label><input type="radio" name="q3" value="c"> c) Human Resources</label>
+                    <label><input type="radio" name="q3" value="d"> d) Operations</label>
+                </div>
+                <div class="result" id="result3"></div>
+            </div>
+            <div class="question">
+                <p>4. A franchise is best described as:</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q4" value="a"> a) A business owned by a single person</label>
+                    <label><input type="radio" name="q4" value="b"> b) A business operating under another company’s brand</label>
+                    <label><input type="radio" name="q4" value="c"> c) A government-funded organization</label>
+                    <label><input type="radio" name="q4" value="d"> d) A partnership with unlimited liability</label>
+                </div>
+                <div class="result" id="result4"></div>
+            </div>
+            <div class="question">
+                <p>5. What is an example of an economic influence on a business?</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q5" value="a"> a) New technology</label>
+                    <label><input type="radio" name="q5" value="b"> b) Interest rates</label>
+                    <label><input type="radio" name="q5" value="c"> c) Employee skills</label>
+                    <label><input type="radio" name="q5" value="d"> d) Corporate culture</label>
+                </div>
+                <div class="result" id="result5"></div>
+            </div>
+            <div class="question">
+                <p>6. Which of the following is a characteristic of a cooperative?</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q6" value="a"> a) Shares traded on the stock market</label>
+                    <label><input type="radio" name="q6" value="b"> b) Owned and controlled by members</label>
+                    <label><input type="radio" name="q6" value="c"> c) Unlimited liability for owners</label>
+                    <label><input type="radio" name="q6" value="d"> d) Focus only on profit</label>
+                </div>
+                <div class="result" id="result6"></div>
+            </div>
+            <div class="question">
+                <p>7. In a market economy, prices are determined by:</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q7" value="a"> a) Government regulations</label>
+                    <label><input type="radio" name="q7" value="b"> b) Supply and demand</label>
+                    <label><input type="radio" name="q7" value="c"> c) Business owners alone</label>
+                    <label><input type="radio" name="q7" value="d"> d) Consumer laws</label>
+                </div>
+                <div class="result" id="result7"></div>
+            </div>
+            <div class="question">
+                <p>8. What does "entrepreneurship" primarily involve?</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q8" value="a"> a) Managing existing businesses</label>
+                    <label><input type="radio" name="q8" value="b"> b) Starting and innovating new ventures</label>
+                    <label><input type="radio" name="q8" value="c"> c) Following strict regulations</label>
+                    <label><input type="radio" name="q8" value="d"> d) Working in the public sector</label>
+                </div>
+                <div class="result" id="result8"></div>
+            </div>
+            <div class="question">
+                <p>9. A business plan is least likely to include:</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q9" value="a"> a) Financial forecasts</label>
+                    <label><input type="radio" name="q9" value="b"> b) Market analysis</label>
+                    <label><input type="radio" name="q9" value="c"> c) Employee personal interests</label>
+                    <label><input type="radio" name="q9" value="d"> d) Business goals</label>
+                </div>
+                <div class="result" id="result9"></div>
+            </div>
+            <div class="question">
+                <p>10. Which is a potential threat in a SWOT analysis?</p>
+                <div class="mcq">
+                    <label><input type="radio" name="q10" value="a"> a) Strong brand loyalty</label>
+                    <label><input type="radio" name="q10" value="b"> b) New competitors entering the market</label>
+                    <label><input type="radio" name="q10" value="c"> c) Skilled workforce</label>
+                    <label><input type="radio" name="q10" value="d"> d) Expansion into new markets</label>
+                </div>
+                <div class="result" id="result10"></div>
+            </div>
+            <button type="button" onclick="checkMCQ()">Submit Section A</button>
+        </form>
+    </div>
+
+    <!-- Section B: Short-Answer Questions -->
+    <div class="section">
+        <h2>Section B: Short-Answer Questions (30 marks)</h2>
+        <form id="shortAnswerForm">
+            <div class="question">
+                <p>11. Explain the difference between a sole trader and a partnership in terms of ownership and liability. (4 marks)</p>
+                <textarea id="q11" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result11"></div>
+            </div>
+            <div class="question">
+                <p>12. Describe two roles of marketing in helping a business succeed. (4 marks)</p>
+                <textarea id="q12" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result12"></div>
+            </div>
+            <div class="question">
+                <p>13. What is meant by "supply and demand" in an economic context, and how might it affect a business? (4 marks)</p>
+                <textarea id="q13" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result13"></div>
+            </div>
+            <div class="question">
+                <p>14. Identify two characteristics of an entrepreneur and explain why they are important. (4 marks)</p>
+                <textarea id="q14" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result14"></div>
+            </div>
+            <div class="question">
+                <p>15. Explain how interest rates could impact a small business’s decision to borrow money. (4 marks)</p>
+                <textarea id="q15" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result15"></div>
+            </div>
+            <div class="question">
+                <p>16. What is the purpose of a cash flow forecast for a business? (4 marks)</p>
+                <textarea id="q16" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result16"></div>
+            </div>
+            <div class="question">
+                <p>17. Name two consumer rights and explain how they influence business practices. (6 marks)</p>
+                <textarea id="q17" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result17"></div>
+            </div>
+            <button type="button" onclick="checkShortAnswers()">Submit Section B</button>
+        </form>
+    </div>
+
+    <!-- Section C: Case Study -->
+    <div class="section">
+        <h2>Section C: Case Study (30 marks)</h2>
+        <p><strong>Case Study: EcoWear Startup</strong> Mia, a Grade 10 student, starts EcoWear, a small business selling eco-friendly T-shirts made from recycled materials. She operates as a sole trader from her home in Sydney, selling online and at local markets. Mia’s goals are to grow her business and promote sustainability. She faces rising costs due to supply chain issues and competition from larger clothing brands. Mia is considering a loan to buy equipment and partnering with a friend to share workload and costs.</p>
+        <form id="caseStudyForm">
+            <div class="question">
+                <p>18. Identify the sector EcoWear operates in and explain why. (4 marks)</p>
+                <textarea id="q18" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result18"></div>
+            </div>
+            <div class="question">
+                <p>19. Conduct a SWOT analysis for EcoWear (one point per category: Strengths, Weaknesses, Opportunities, Threats). (8 marks)</p>
+                <textarea id="q19" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result19"></div>
+            </div>
+            <div class="question">
+                <p>20. Recommend whether Mia should take a loan or form a partnership. Justify with two reasons. (6 marks)</p>
+                <textarea id="q20" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result20"></div>
+            </div>
+            <div class="question">
+                <p>21. Using STEEPLE, identify one Economic factor affecting EcoWear and suggest how Mia could respond. (6 marks)</p>
+                <textarea id="q21" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result21"></div>
+            </div>
+            <div class="question">
+                <p>22. Outline two financial elements Mia should track to ensure EcoWear’s success. (6 marks)</p>
+                <textarea id="q22" placeholder="Your answer here..."></textarea>
+                <div class="result" id="result22"></div>
+            </div>
+            <button type="button" onclick="checkCaseStudy()">Submit Section C</button>
+        </form>
+    </div>
+
+    <!-- Section D: Essay Question -->
+    <div class="section">
+        <h2>Section D: Essay Question (20 marks)</h2>
+        <form id="essayForm">
+            <div class="question">
+                <p>23. Discuss the advantages and challenges of entrepreneurship for young people starting a business. Evaluate whether a sole trader or partnership structure would be more suitable for a teenage entrepreneur and why.</p>
+                <textarea id="q23" placeholder="Your answer here (200-300 words)..."></textarea>
+                <div class="result" id="result23"></div>
+            </div>
+            <button type="button" onclick="checkEssay()">Submit Section D</button>
+        </form>
+    </div>
+
+    <div id="totalScore"></div>
+
+    <script>
+        const mcqAnswers = {
+            q1: "b", q2: "a", q3: "c", q4: "b", q5: "b",
+            q6: "b", q7: "b", q8: "b", q9: "c", q10: "b"
+        };
+
+        const shortAnswerKey = {
+            q11: "A sole trader is owned by one person with unlimited liability, while a partnership has 2+ owners sharing liability.",
+            q12: "Marketing promotes products to attract customers and researches consumer needs to improve offerings.",
+            q13: "Supply and demand determine prices; high demand can increase revenue, low supply can raise costs.",
+            q14: "Creativity (for innovation) and risk-taking (to start ventures) drive entrepreneurial success.",
+            q15: "High interest rates increase borrowing costs, discouraging loans; low rates make borrowing affordable.",
+            q16: "A cash flow forecast predicts money in/out to ensure liquidity and avoid financial issues.",
+            q17: "Right to safety (safe products) and information (clear labeling) force businesses to comply."
+        };
+
+        const caseStudyKey = {
+            q18: "Secondary Sector—EcoWear manufactures T-shirts from recycled materials.",
+            q19: "Strengths: Eco-friendly products. Weaknesses: High costs. Opportunities: Growing green market. Threats: Big competitors.",
+            q20: "Partnership—shared costs and workload ease Mia’s burden.",
+            q21: "Economic: Rising costs—source cheaper local materials.",
+            q22: "Revenue (sales income) and expenses (production costs) ensure profitability."
+        };
+
+        const essayExample = "Entrepreneurship offers young people advantages like independence and the chance to innovate, allowing them to turn creative ideas into businesses, such as starting an eco-friendly brand. It builds skills like problem-solving and resilience, valuable for future careers. However, challenges include limited experience, which can lead to poor decisions, and financial risks, especially with little startup capital. For a teenage entrepreneur, a sole trader structure provides full control and simplicity, ideal for small ventures like selling handmade goods, but it carries unlimited liability, risking personal savings. A partnership shares risks and resources, like pooling money with a friend, but may lead to conflicts over decisions. A partnership is more suitable for teens as it reduces individual pressure and leverages combined skills, making it easier to sustain and grow a business while learning.";
+
+        let totalScore = 0;
+
+        function checkMCQ() {
+            let score = 0;
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const resultDiv = document.getElementById(`result${i}`);
+                resultDiv.style.display = "block";
+                if (selected && selected.value === mcqAnswers[`q${i}`]) {
+                    score += 1;
+                    resultDiv.className = "result correct";
+                    resultDiv.textContent = "Correct! (1/1)";
+                } else {
+                    resultDiv.className = "result incorrect";
+                    resultDiv.textContent = `Incorrect. Correct answer: ${mcqAnswers[`q${i}`]}. (0/1)`;
+                }
+            }
+            totalScore += score;
+            updateTotalScore();
+        }
+
+        function checkShortAnswers() {
+            let score = 0;
+            for (let i = 11; i <= 17; i++) {
+                const answer = document.getElementById(`q${i}`).value.trim().toLowerCase();
+                const resultDiv = document.getElementById(`result${i}`);
+                const marks = (i === 17) ? 6 : 4;
+                resultDiv.style.display = "block";
+                if (answer.includes(shortAnswerKey[`q${i}`].toLowerCase().substring(0, 30))) {
+                    score += marks;
+                    resultDiv.className = "result correct";
+                    resultDiv.textContent = `Correct! (${marks}/${marks})`;
+                } else {
+                    resultDiv.className = "result incorrect";
+                    resultDiv.textContent = `Incorrect. Expected: ${shortAnswerKey[`q${i}`]}. (0/${marks})`;
+                }
+            }
+            totalScore += score;
+            updateTotalScore();
+        }
+
+        function checkCaseStudy() {
+            let score = 0;
+            for (let i = 18; i <= 22; i++) {
+                const answer = document.getElementById(`q${i}`).value.trim().toLowerCase();
+                const resultDiv = document.getElementById(`result${i}`);
+                const marks = (i === 19) ? 8 : 6;
+                resultDiv.style.display = "block";
+                if (answer.includes(caseStudyKey[`q${i}`].toLowerCase().substring(0, 30))) {
+                    score += marks;
+                    resultDiv.className = "result correct";
+                    resultDiv.textContent = `Correct! (${marks}/${marks})`;
+                } else {
+                    resultDiv.className = "result incorrect";
+                    resultDiv.textContent = `Incorrect. Expected: ${caseStudyKey[`q${i}`]}. (0/${marks})`;
+                }
+            }
+            totalScore += score;
+            updateTotalScore();
+        }
+
+        function checkEssay() {
+            const answer = document.getElementById("q23").value.trim().toLowerCase();
+            const resultDiv = document.getElementById("result23");
+            resultDiv.style.display = "block";
+            if (answer === "") {
+                resultDiv.className = "result example";
+                resultDiv.textContent = `No answer provided. Here’s an example essay (0/20):\n\n${essayExample}`;
+            } else if (answer.length > 150 && answer.includes("entrepreneur") && answer.includes("sole trader") && answer.includes("partnership")) {
+                totalScore += 20;
+                resultDiv.className = "result correct";
+                resultDiv.textContent = "Correct! Well-structured response. (20/20)";
+            } else {
+                resultDiv.className = "result incorrect";
+                resultDiv.textContent = `Incorrect. Expected a discussion on entrepreneurship advantages/challenges and sole trader vs partnership suitability. (0/20)`;
+            }
+            updateTotalScore();
+        }
+
+        function updateTotalScore() {
+            document.getElementById("totalScore").textContent = `Total Score: ${totalScore}/100`;
+        }
+    </script>
+</body>
+</html>
